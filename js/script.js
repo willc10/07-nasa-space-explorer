@@ -6,6 +6,11 @@ const gallery = document.getElementById('gallery');
 // Setup default dates
 setupDateInputs(startInput, endInput);
 
+// Show a random space fact
+const factBox = document.getElementById('random-fact');
+const randomIndex = Math.floor(Math.random() * spaceFacts.length);
+factBox.textContent = spaceFacts[randomIndex];
+
 // Listen for button click
 button.addEventListener('click', () => {
   const startDate = startInput.value;
